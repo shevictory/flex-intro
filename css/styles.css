@@ -1,0 +1,65 @@
+@import './reset.css';
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+}
+
+.outerBlock {
+  width: 100%;
+  height: 100%;
+  border: 5px solid blue;
+  background-color: dodgerblue;
+}
+
+.flexContainer {
+  display: flex;
+  justify-content: space-evenly;
+  /* flex-start; */
+  align-items: flex-start;
+  /*flex-wrap: nowrap;:
+               stretch, а если задан размер вдоль поперечной оси, то как flex-start 
+    flex-wrap: wrap;:
+                + align-content: stretch;:
+                  stretch, а если задан размер вдоль поперечной оси, то как flex-start
+                + align-content: не stretch;:
+                  center*/
+  flex-direction: row;
+  /* row */
+  flex-wrap: nowrap;
+  /*nowrap*/
+  /* flex-flow: row wrap; */
+  align-content: flex-start;
+  /* stretch, а если задан размер вдоль поперечной оси, то space-between*/
+  /* если не stretch, то вдоль поперечной оси нет места для маневра align-items, если этот размер равный у блоков*/
+}
+
+.innerBlock {
+  /* width: 100%; */
+  max-width: 350px;
+  /* min-width: 80px; */
+  /* height: 200px; */
+  padding: 20px;
+  /* margin: 20px; */
+  font-size: 20px;
+  border: 5px solid orange;
+  background-color: gold;
+}
+
+.flexChild {
+  /* размер вдоль главной оси */
+  /* flex-basis: 200px; */
+  /* auto */
+  /* коэф. сжатия: соотношение того, сколько кому не хватает
+     работает, когда места не хватает в соответствии с flex-basis  */
+  /* flex-shrink: 1; */
+  /* 1 */
+  /* коэф. растяжения */
+  /* flex-grow: 1; */
+  /* 0 */
+  /* flex: ; */
+  /*  flex-grow flex-shrink flex-basis */
+}
